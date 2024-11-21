@@ -1,0 +1,288 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    display: grid;
+    background-color: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 0.3fr 3fr 3fr 0.3fr;
+    grid-template-areas: 
+                        'sidebar main main'
+                        'sidebar nav nav'
+                        'sidebar origenes keypoints'
+                        'sidebar filtrados marcas'
+                        'sidebar footer footer';
+}
+
+main
+{
+    background-color: blanchedalmond;
+    color: black;
+    height: 100%;
+    grid-area: main;
+}
+
+main img
+{
+    padding: 5px;
+    border: 3px dashed chocolate;
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+main div
+{
+    font-size: small;
+    height: 75%;
+    width: 75%;
+    float: right;
+}
+
+nav
+{
+    background-color: burlywood;
+    color: black;
+    grid-area: nav;
+    overflow: hidden;
+}
+
+nav ul
+{
+    list-style: none;
+
+}
+
+nav ul li
+{
+    float: right;
+    margin-top: 1px;
+
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+    padding: 1px 1px;
+    border-radius: 5px;
+    background-color: chocolate;
+}
+
+nav ul li a:hover
+{
+    background-color: darkgoldenrod;
+    color: black;
+}
+
+.sidebar
+{
+    background-color: chocolate;
+    color: white;
+    grid-area: sidebar;
+}
+
+.origenes
+{
+    background-color: #E5E4E2;
+    color: black;
+    grid-area: origenes;    
+}
+
+.origenes img
+{
+    width: 200px;
+    height: 200px;
+    float: initial;
+
+}
+
+.keypoints
+{
+    background-color: #D3D3D3;
+    color: black;
+    grid-area: keypoints;    
+}
+
+.keypoints img
+{
+        width: 200px;
+        height: 200px;
+        float: initial;
+    
+}
+
+.filtrados
+{
+    background-color: #C0C0C0;
+    color: black;
+    grid-area: filtrados;    
+}
+
+.filtrados img
+{
+    width: 200px;
+    height: 200px;
+    float: initial;
+
+}
+
+.marcas
+{
+    background-color: #B2BEB5;
+    color: black;
+    grid-area: marcas;    
+}
+
+.marcas img
+{
+        width: 200px;
+        height: 200px;
+        float: initial;
+    
+}
+
+footer
+{
+    background-color: chocolate;
+    color: white;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 480px)
+{
+    .container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+                            'main'
+                            'nav'
+                            'sidebar'
+                            'origenes'
+                            'keypoints'
+                            'filtrados'
+                            'marcas'
+                            'footer';
+    }
+
+    main img
+    {
+        width: 75px;
+        height: 75px;
+    
+    }
+
+    .sidebar
+    {
+    background-color: darkred;
+    color: white;
+    grid-area: sidebar;
+    }
+
+    .origenes
+    {
+        background-color: #F2D2BD;
+        color: black;
+        grid-area: origenes;    
+    }
+
+    .keypoints
+    {
+        background-color: #D2B48C;
+        color: black;
+        grid-area: keypoints;    
+    }
+
+    .filtrados
+    {
+        background-color: #E5AA70;
+        color: black;
+        grid-area: filtrados;    
+    }
+
+    .marcas
+    {
+        background-color: #C19A6B;
+        color: black;
+        grid-area: marcas;    
+    }
+
+    footer
+    {
+    background-color: darkred;
+    color: white;
+    grid-area: footer;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width:1023px)
+{
+    .container
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.2fr 0.3fr 2fr 2fr 0.2fr;
+        grid-template-areas: 
+                            'main main'
+                            'nav nav'
+                            'sidebar sidebar'
+                            'origenes keypoints'
+                            'filtrados marcas'
+                            'footer footer';
+    }
+
+    main img
+    {
+        width: 100px;
+        height: 100px;
+    
+    }
+
+    .sidebar
+    {
+    background-color: #FFAA33;
+    color: white;
+    grid-area: sidebar;
+    }
+
+    .origenes
+    {
+        background-color: #ECFFDC;
+        color: black;
+        grid-area: origenes;    
+    }
+
+    .keypoints
+    {
+        background-color: #AFE1AF;
+        color: black;
+        grid-area: keypoints;    
+    }
+
+    .filtrados
+    {
+        background-color: #98FB98;
+        color: black;
+        grid-area: filtrados;    
+    }
+
+    .marcas
+    {
+        background-color: #93C572;
+        color: black;
+        grid-area: marcas;    
+    }
+
+    footer
+    {
+    background-color: #FFAA33;
+    color: white;
+    grid-area: footer;
+    }
+}
